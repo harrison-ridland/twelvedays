@@ -19,7 +19,7 @@
 
 
 make_phrase <- function(num, num_word, item, verb, adjective, location){
-
+  item <- pluralize_gift(item)
   verb <- str_replace_na(verb, "")
   adjective <- str_replace_na(adjective, "")
   location <- str_replace_na(location, "")
