@@ -21,6 +21,7 @@ make_phrase <- function(num, num_word, item, verb, adjective, location){
   if (num != 1){
     item <- pluralize_gift(item)
   }
+  num_word = numify(num)
   verb <- str_replace_na(verb, "")
   adjective <- str_replace_na(adjective, "")
   location <- str_replace_na(location, "")
