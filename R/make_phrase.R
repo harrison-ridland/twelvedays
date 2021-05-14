@@ -17,13 +17,15 @@
 #' @export
 
 
-
 make_phrase <- function(num, num_word, item, verb, adjective, location){
-  item <- pluralize_gift(item)
+  if (num != 1){
+    item <- pluralize_gift(item)
+  }
   verb <- str_replace_na(verb, "")
   adjective <- str_replace_na(adjective, "")
   location <- str_replace_na(location, "")
-  combined = str_c(num_word, " ",  item, " ", verb, adjective, location)
+  combined = str_c(num_word, adjective, item, verb, location, sep = " ") 
+  combined = str_replace_all(combined, "  ", " ")
+  combined = str_replace(combined, " $", "")
   return(combined)
 }
-
