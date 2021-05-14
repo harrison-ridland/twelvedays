@@ -29,3 +29,30 @@ make_phrase <- function(num, num_word, item, verb, adjective, location){
   combined = str_replace(combined, " $", "")
   return(combined)
 }
+numify = function(number){
+  if (number == 1){
+    num = "a"
+  } else if (number == 2){
+    num = "Two"
+  } else if (number == 3){
+    num = "Three"
+  }else if (number == 4){
+    num = "Four"
+  }else if (number == 5){
+    num = "Five"
+  }else if (number == 6){
+    num = "Six"
+  }else if (number == 7){
+    num = "Seven"
+  }else if (number == 8){
+    num = "Eight"
+  }else if (number == 9){
+    num = "Nine"
+  }else if (number == 10){
+    num = "Ten"
+  }else if (number == 11){
+    num = "Eleven"
+  }else if (number == 12){
+    num = "Twelve"
+  }
+}
