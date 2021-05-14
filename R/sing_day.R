@@ -28,11 +28,4 @@ sing_day <- function(dataset, line, phrase_col){
   singvec = glue::as_glue(singvec)
 return(singvec)
 }
-sing_a_song = function(data){
-  data = data %>%
-  mutate(
-    Full.Phrase = pmap_chr(data, ~make_phrase(..1, numify(..1), ..3, ..4, ..5, ..6))
-  )
-  return(sapply(1:12, function(y) sing_day(data, y, "Full.Phrase")))
-}
                             
