@@ -57,3 +57,7 @@ numify = function(number){
     num = "Twelve"
   }
 }
+
+test_that("test making a phrase",{
+  expect_error(make_phrase(1, "First", "Apple", NA, NA, "in a boars mouth"))
+})
