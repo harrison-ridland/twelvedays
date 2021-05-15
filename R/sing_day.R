@@ -29,3 +29,6 @@ sing_day <- function(dataset, line, phrase_col){
 return(singvec)
 }
                             
+test_that("test sing day with ",{
+  expect_error(sing_day(read.csv("https://www.dropbox.com/s/e584pryn8evm1gz/xmas.csv?dl=1"), 1, item))
+})
