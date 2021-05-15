@@ -21,3 +21,7 @@ gift <- gift %>%
 }
 return(gift)
 }
+
+test_that("test pluralize_gift with dog",{
+  expect_error(pluralize_gift("dog"))
+})
